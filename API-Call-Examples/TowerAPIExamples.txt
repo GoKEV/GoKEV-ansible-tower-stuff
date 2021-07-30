@@ -1,6 +1,8 @@
 ##	Launch a job template in Ansible Tower
 curl -s -f -k -H 'Content-Type: application/json' -XPOST -d '{}' --user kev:kev https://ansibletower.kev/api/v2/job_templates/27/launch/
 
+## If job template 27 is named "My Job Template," then the URL can replace 27 with the URL-encoded term "My%20Job%20Template" as so:  /api/v2/job_templates/My%20Job%20Template/launch/
+
 
 ##	Launch a job template in Ansible Tower with variables pushed
 ##	Remember to set the variables box in the job template to [ x ] PROMPT ON LAUNCH to allow these vars to be passed.  Otherwise, default vars (if available) will be used.
